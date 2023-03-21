@@ -190,3 +190,45 @@ main {
   width: 1060px;
   margin: 86px auto 135px;
 }
+/* //main */
+
+
+/* footer */
+fotter {
+  width: 100%;
+}
+
+footer li {
+  display: inline-block;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 53px 0px 42px 0px;
+  border-bottom: 1px solid #BDBDBD;
+}
+
+.footer-logo h2 {
+  font-size: 22px;
+}
+
+.footer-logo a {
+  margin-right: 23px;
+  color: #4F4F4F;
+}
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 36px;
+  color: #4F4F4F;
+}
+
+.footer-box li :first-child,
+p {
+  font-weight: bold;
+}
+
+/* //footer */
+
