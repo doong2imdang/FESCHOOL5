@@ -1,0 +1,138 @@
+h1, h2, h3, p, button, body, ul, li{
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+}
+
+/* header */
+.header {
+  padding: 20px 0 18px 0;
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 18px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* //header */
+
+/* main */
+main {
+  padding: 26px 24px 25px 24px;
+}
+
+main h2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 0 0 24px 0;
+}
+
+.form-wrap {
+  width: 520px;
+  margin: 0 auto;
+}
+
+.label-style,
+.input-style {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.blue-btn {
+  background: #2F80ED;
+  color: #fff;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.input-style {
+  border: 1px solid #c4c4c4;;
+  border-radius: 5px;
+  padding: 15px 16px;
+  color: #767676;
+}
+
+.label-style {
+  font-size: 16px;
+  color: #767676;
+}
+
+.check-input {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  background: url(./images/check-box-off.svg) no-repeat;
+  vertical-align: middle;
+  margin: 0 4px 3px 0;
+}
+
+.check-input:checked {
+  background: url(./images/check-box-on.svg) no-repeat;
+}
+
+.check-input+label {
+  font-size: 16px;
+  color: #767676;
+}
+
+.user-util {
+  color: #767676;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.fc-btn,
+.nv-btn,
+.kk-btn,
+.gg-btn {
+  width: 100%;
+  border: 1px solid #767676;
+  color: #767676;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
