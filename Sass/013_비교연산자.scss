@@ -1,0 +1,9 @@
+$value: 32px;
+
+p {
+  @if ($value >= 32px) { //true
+      letter-sapcing: 1rem;
+  } @else {
+      letter-sapcing: 0.5rem;
+  }
+}

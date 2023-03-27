@@ -1,0 +1,14 @@
+$value: blue;
+.one {
+  // 권장하지 않습니다. (내부변수를 전역 변수로 바꾸는 것을)
+  $value: red !global;
+  color: $value;
+  .three {
+    background-color: $value;
+  }
+}
+
+
+.two {
+  color: $value;
+}
