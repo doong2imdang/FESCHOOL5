@@ -8,12 +8,89 @@
 </head>
 <body>
   <script>
+    //원시타입 : string, number, bigint, boolean, undefined, symbol, null
     let str1 = 'hello';
     let str2 = str1;
     console.log(str2); // 'hello'
 
     str1 = 'world';
     console.log(str2); // str2에 할당된 값은 여전히 'hello' 입니다.
+
+    //string
+    console.log(typeof 'hello') //string
+    console.log(typeof "hello") //string
+
+    // 이스케이프 문자
+    // \' 작은따옴표
+    // \" 큰따옴표
+    // \t 가로탭
+    // \n 줄 바꿈
+
+    console.log(typeof 'i\'m so happy')
+    console.log('h\ne\nl\nl\no')
+
+    //number
+    console.log(typeof 10)
+    console.log(typeof 10.1)
+    console.log(typeof NaN)
+
+    //boolean
+    console.log(typeof true)
+    console.log(typeof false)
+
+    //undefined
+    console.log(typeof undefined)
+    let a;
+    console.log(a)
+
+    //null(값이 비어있음을 명시적으로 나타냄)
+    console.log(typeof null) //object - 설계오류인 것을 개발자가 인정 (논외)
+
+    //bigint(2^53 - 1 보다 큰 정수) 
+    console.log(90071992547409960n + 90071992547409960n)
+    //자바스크립트가 취급할 수 있는 수를 넘어가면 빅인트로 처리해줘야한다.
+    console.log(90071992547409960 + 90071992547409960) //두 결과가 같지 않다.
+    console.log(typeof 90071992547409960n) //bigint
+
+    //symbol
+    console.log(typeof Symbol()) //뒷부분에서 다룰 예정 거의 만날 일 없다.
+
+
+
+    /////////////////////////////////////////////////////////////////
+    //객체타입
+    //function
+    console.log(typeof function(){}) 
+    
+    //object
+    console.log(typeof [10, 20, 30]) //배열
+    console.log(typeof {a:10, b: 20}) //object
+    console.log(typeof /정규표현식/gi) //object
+
+    //형변환(다른 type -> number)
+    console.log(+'10')
+    console.log(Number('10')) // 권하지 않습니다.
+    console.log(parseInt('10')) //권합니다
+    console.log(parseFloat('10.1')) //권합니다.
+    console.log(parseInt(true))  // NaN
+    console.log(parseInt(false)) // NaN
+    console.lot(Number(true)) // 1
+    console.lot(Number(false)) // 0
+
+    //형변환(다른 type -> string)
+    let doong = 10;
+    console.log(doong.toString()) //권합니다.
+    //10.toString() 10. 까지를 소숫점으로 봅니다.
+    console.log(''+ 10)
+    console.log(String(10))
+
+    //형변환(다른 type -> boolean)
+    let doong2 = 10;
+    console.log(Boolean(-1)) //true (0이외 다른 숫자는 모두 true)
+    console.log(Boolean(0)) //false
+    console.log(Boolean(1000)) //true
+    console.log(!!1000) //true
+    console.log(!!doong2) //true
   </script>
 </body>
 </html>
