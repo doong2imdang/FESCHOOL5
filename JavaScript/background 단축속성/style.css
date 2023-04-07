@@ -1,0 +1,74 @@
+/* body {
+  background-color: pink;
+} */
+
+/* .box {
+  width: 100px;
+  height: 100px;
+  background-color: currentcolor; 
+} */
+
+/* .mdh {
+  width: 1300px;
+  height: 1300px;
+}  */
+
+/* .box {
+  width: 200px;
+  height: 200px;
+  color: white;
+  background: url(https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/765/07dc8b1e8d60ed20a4299acc77102296_res.jpeg) border-box no-repeat;
+  border: 10px dashed black;
+} */
+
+/* .box {
+  width: 200px;
+  height: 200px;
+  color: white;
+  background: url(img/mdh1.jpg);
+  border: 10px dashed black;
+} */
+
+/* .box {
+  width: 500px;
+  height: 500px;
+  background: url(img/mdh1.jpg) no-repeat center/30%;
+} */
+
+/* .background {
+  width: 300px;
+  height: 300px;
+  border: 10px dashed green;
+  background-image: url(img/mdh1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-clip: border-box;
+}
+
+.background p {
+  font-size: 30px;
+  font-weight: bold;
+}
+*/
+
+
+
+/*.background {
+  width: 200px;
+  height: 200px;
+  border: 10px dashed green;
+  background: transparent url(img/mdh1.jpg) no-repeat center/ cover content-box;
+} */ 
+/* .box {
+  width: 500px;
+  height: 500px;
+  background-image: url(./img/star.png), url(./img/mdh1.jpg), red;
+}
+*/
+
+.background {
+  width: 300px;
+  height: 300px;
+  background: #000 url(./img/mdh1.jpg) no-repeat top/ 50% ;
+}

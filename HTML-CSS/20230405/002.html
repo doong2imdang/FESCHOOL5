@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      /* video {
+        width: 100%;
+        max-width: 100%;
+      } */
+/* iframe으로 반응형 만드는 방법(지원하는 지 여부도 중요) */
+      /* 16대 9로 나눠놨기때문에 56.25% (종횡비 :높이 / 넓이 * 100) */
+      /* height: 56.25%로 설정할 수 없는 이유는 부모요소에 높이값이 있어야 하는데 이 경우 부모는 body인데, body의 width은 있지만 height 값은 따로 설정이 되어잇지 않기때문이다. if, body에 높이 값을 주고 컨테이너에 높이 값을 주면 가능해지지만 높이값을 주게되면 유연함이 사라지기 때문에 굳이 이렇게 설정하지 않는다. padding-top, padding-bottom은 부모요소의 width값만 잇으면 되기때문이다.*/
+      /* height: 56.25vw;도 가능 */
+      /* aspect-ratio: 16/9; IE지원 X */
+      /* 많은 개발자들이 잘 모르는 CSS 매직을 알려드리겠습니다 :)
+      /* padding-top, padding-bottom 속성의 % 값은 부모 요소의 넓이에 비례합니다. */
+      /* 예를 들어 부모의 넚이가 1200px 이라면 자식요소의 padding-top=50% 의 값은 600px 과 같습니다. */
+      /* .cont-video {
+      position: relative;
+      padding-top: 56.25%;   
+      
+  }  */
+
+
+    /* .video-next-level {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    } */
+
+
+    .full-screen-vid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* min-width: 100%; */
+      /* min-height: 100%; */
+      height: 100%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    </style>
+</head>
+<body>
+  <video class="full-screen-vid" autoplay controls muted loop src="nextlevel.mp4"></video>
+
+  <!-- <article class="cont-video">
+    <iframe class="video-next-level"
+            src="https://www.youtube.com/embed/4TWR90KJl84?autoplay=1&mute=1&loop=1&playlist=4TWR90KJl84&controls=1"
+            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </article> -->
+</body>
+</html>

@@ -21,12 +21,12 @@ console.log(height || 100) // 100
 console.log(height ?? 100) // 0 height가 null이야? 라고 물어보는 것: null이 아니기 때문에 0이 나온다.
 
 let height2;
-console.log(height2 || 100) 
-console.log(height2 ?? 100)
+console.log(height2 || 100) // 100
+console.log(height2 ?? 100) // 100
 
 let height3 = '';
-console.log(height3 || 'hello') 
-console.log(height3 ?? 'world')
+console.log(height3 || 'hello')  // hello
+console.log(height3 ?? 'world')  // 빈문자열
 
 // 제가 지금 주석으로 다는 내용은 지금 여기서는 모르셔도 괜찮습니다. 
 // || : 0, null, undefined
