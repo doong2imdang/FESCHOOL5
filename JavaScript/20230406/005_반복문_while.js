@@ -110,7 +110,7 @@ console.log(result)
 
 
 let s = 'hello world'
-let result = ''
+let result = '';
 let count = 0
 while(count < s.length) {
   result = s[count] + result 
@@ -126,7 +126,7 @@ let s = 1;
 for (let i = 1; i < 6; i++) {
   s *= i
 }
-console.log(s)
+console.log(s)             // 120
 
 // s = s *  i // 1 * 1 
 // s = 1 *  2 

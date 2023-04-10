@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <!-- <p>hello</p>
+  <p>hello</p>
+  <p id="myTxt">hello</p>
+  <p class="txt1">hello</p>
+  <p class="txt1">hello</p>
+
+  <script>
+    console.log(document.getElementById('myTxt'));
+    console.log(document.getElementsByTagName('p'));
+    console.log(document.getElementsByClassName('txt1'));
+
+
+    const element = document.getElementsByClassName('txt1');
+  </script> -->
+    점심 식단
+    <article id="container">
+        <ul>
+            <li>탕수육</li>
+            <li class="item-second">유산슬</li>
+            <li>짜장면</li>
+        </ul>
+    </article>
+    저녁 식단
+    <article>
+        <ul>
+            <li>된장국</li>
+            <li class="item-second">김치찌게</li>
+            <li>해장국</li>
+        </ul>
+    </article>
+
+    <script>
+        const container = document.getElementById('container');
+        // console.log(container.getElementsByTagName('li')[0]); // []연산자로 접근할 수 있다. .은 안된다. 
+        console.log(container.querySelector('li')[2]);    // 탕수육 (why? 찾는 요소가 여러개라면 첫번째 요소를 반환함)
+        console.log(container.getElementsByClassName('item-second')[0]);
+        console.log(container.querySelector('.item-second')); // 유산슬 (id를 찾을려면 #item-second로)
+
+        // document: 6개  | container: 3개
+        console.log(container.getElementsByTagName('li'));
+        console.log(container.querySelectorAll('li'));  // 뒤로 배치하면 4로 바뀜
+
+        container.querySelector('.item-second').textContent = '라조기';  // 유산슬 => 라조기 로 바꿈
+        container.querySelector('.item-second').classList.add('new');  // class에 new가 추가된 것을 볼 수 있음
+        // console.log(document.querySelector('li:last-child'));  // 짜장면
+        // console.log(document.querySelector('li:nth-child(3)'));  // 짜장면
+
+        // document 대신 container 쓸수도 있다. 
+        // console.log(documnet.getElementsByTagName('li')[0]); 
+
+        // => const container = document.getElementById('container');
+        // console.log(container.getElementsByTagName('li')[0]);
+        // const listItem = document.createElement('li');    // 메모리 영역(만들어서 변수에 저장 but 눈에 보이지 않음)
+        // container.append(listItem);     // 눈에 보이게 만들기
+
+        // HTMLCollection은 실시간으로 업데이트되며, 해당 컬렉션의 각 요소에 대한 변경 사항이 즉시 반영됩니다. 반면에, NodeList는 정적이므로 해당 컬렉션에 대한 변경 사항은 즉시 반영되지 않습니다.
+        // 이미 가지고 있는 요소가 변할 때는 업데이트가 된다. 아예 정적인 것은 아니다. 
+
+        // const target = document.querySelector('.item-second');
+        // target.remove();
+        
+    </script>
+</body>
+</html>

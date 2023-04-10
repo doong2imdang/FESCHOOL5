@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+      .blue {
+        background-color: blue;
+      }
+    </style>
+</head>
+<body>
+  <button class="blue green red">hello</button>
+
+  <script>
+    const myBtn = document.querySelector("button");
+
+  myBtn.addEventListener('click', function(){
+    // console.log("hello world");      // 콜백함수(리스너함수)
+    // myBtn.classList.add("blue");       
+    // myBtn.classList.remove("blue");
+    // myBtn.classList.toggle("blue");
+    console.log(myBtn.classList.contains("blue"));   // 여러가지 클래스가 있더라도 해당하는 클래스가 있는지 확인합니다.
+  })                      
+
+  </script>
+</body>
+</html>

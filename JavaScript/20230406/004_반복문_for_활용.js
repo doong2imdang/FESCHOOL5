@@ -230,7 +230,7 @@ for (const i of user) {
   console.log(i.age)   // 마지막에 undefined
   console.log(s)      // 마지막에 102
   console.log('----------')
-  s += i.age ?? 0     // ?? 0 를 넣어주면 결과 25.50skdha
+  s += i.age ?? 0     // ?? 0 를 넣어주면 결과 25.50
 }
 console.log((s / user.length).toFixed(2))
 
@@ -242,7 +242,7 @@ console.log(user[0].age)
 console.log(s)
 console.log(s)
 console.log('------------')
-s += user[0].age ?? 0
+s += user[0].age ?? 0               // 31
 
 // step2
 console.log(user[1])
@@ -250,9 +250,16 @@ console.log(user[1].age)
 console.log(s)
 console.log(s)
 console.log('------------')
-s += user[0].age ?? 0
+s += user[0].age ?? 0               // 32
 
-// ... 생략 ...
+// step3
+console.log(user[2])
+console.log(user[2].age)
+console.log(s)
+console.log(s)
+console.log('------------')
+s += user[0].age ?? 0              // 39
+
 
 /////
 s = 0
@@ -270,7 +277,7 @@ console.log((s / user.length).toFixed(2))
 !!1             // t
 !!-1           // t
 !!0            // f
-!!''           // t
+!!''           // f
 !!'hello'      // t
 !!NaN          // f
 !!undefined    // f
@@ -284,7 +291,7 @@ user.map(v => v.age).filter(v => !!v) // [31, 32, 39]
 user
     .map(v => v.age)
     .filter(v => !!v)
-    .reduce((a, b) => a+b, 0) // 102
+    .reduce((a, b) => a + b, 0) // 102
 
 
     // ```

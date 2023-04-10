@@ -207,7 +207,7 @@ function runPython({
 
 
 //////////////////
-// 화살표 함수에 대한 다양한 예제제
+// 화살표 함수에 대한 다양한 예제
 // 읽어볼만한 문헌 : https://ko.javascript.info/arrow-functions-basics
 
 function 함수1(x, y) {

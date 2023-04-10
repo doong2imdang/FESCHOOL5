@@ -110,7 +110,7 @@ const 요일객체2 = {
 // nullish 연산자 사용
 console.log(요일객체2[요일2] ?? 'hello')   // hello   // 요일객체2[요일2]가 undefined라 hello 출력
 //단락평가 사용
-console.log(요일객체[요일] || 'hello')     // 목요일
+console.log(요일객체[요일] || 'hello')     // 목요일(당일 요일)
 
 
 // terminal

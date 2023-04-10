@@ -5,8 +5,8 @@ let firstName = null;
 let lastName = null;
 let nickName =  '둥이';
 
-console.log(firstName ?? nickName)
-console.log(firstName ?? lastName ?? nickName)
+console.log(firstName ?? nickName)   // 둥이
+console.log(firstName ?? lastName ?? nickName)    // 둥이
 console.log(firstName ?? lastName ?? nickName ?? '익명사용자') // 값이 다 null일떄 익명사용자라고 나온다.
 
 let a = null;

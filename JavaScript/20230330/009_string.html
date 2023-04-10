@@ -46,10 +46,10 @@
     // md = md.replace(/[\#]{2}(.+)/g, '<h2>$1</h2>');
 
     let md = '# hello world'
-    md = md.replace(/[\#]{1} (.+)/g, '<h1>$1</h1>');
+    md = md.replace(/[\#]{1} (.+)/g, '<h1>$1</h1>');    // <h1>hello world</h1>
 
     let md2 = '# hello world\n* hello world'
-    md2 = md2.replace('# ', '<h1>') + '</h1>'
+    md2 = md2.replace('# ', '<h1>') + '</h1>'           // <h1>hello world\n* hello world</h1>
 
     
   </script>

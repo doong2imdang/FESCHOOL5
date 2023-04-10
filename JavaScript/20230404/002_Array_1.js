@@ -2,7 +2,7 @@
 const arr = [10, 20, 30]
 arr[0] = 100 // const는 값의 변화가 안된다고 하지 않았나?  // 변경가능, mutable
 // arr = 100
-// arr = [10, 20, 30]
+// arr = [100, 20, 30]
 console.log(arr)
 console.dir(arr) // 프러퍼티와 메서를 볼 수 있습니다.
 
@@ -184,7 +184,7 @@ myArray.slice(0, 100)    // ['apple', 'banana', 'cherry', 'durian', 'elderberry'
 
 const arr = [10, 20, 30, 40, 50]
 //arr.forEach(함수)
-// 함수 (callbackfn) : (value: numver, index: number, array: number[])
+// 함수 (callbackfn) : (value: number, index: number, array: number[])
 // callback function  나중에 부르는 함수 
 
 arr.forEach(function(item, index){

@@ -23,7 +23,7 @@ function solution(n) {
 }
 
 // 모음 제거
-Array.from('hello world').filter(v => !["a", "e", "i", "o", "u"].includes(v))
+Array.from('hello world').filter(v => !["a", "e", "i", "o", "u"].includes(v))     // ['h', 'l', 'l', ' ', 'w', 'r', 'l', 'd']
 
 // reduce // 하나씩 축적해주는 
 const arr1 = [1, 2, 3, 4, 5]
