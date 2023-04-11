@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체</title>
+</head>
+<body>
+  <article class="parent">
+    <ol>
+        <li><button class="btn-first" type="button">버튼1</button></li>
+        <li><button type="button">버튼2</button></li>
+        <li><button type="button">버튼3</button></li>
+    </ol>
+  </article>
+  <script>
+    // 핸들러 => 콜백함수를 뜻함
+    const btnFirst = document.querySelector('.btn-first');
+    btnFirst.addEventListener('click', (event) => {     // event에는 아무이름이여도 상관x
+        console.log(event);
+    });
+  </script>
+</body>
+</html>

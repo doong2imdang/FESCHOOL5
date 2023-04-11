@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <img
+    class="terran battle-cruiser"
+    src="battle-cruiser.png"
+    data-ship-id="324"
+    data-weapons="laser"
+    data-health="400"
+    data-mana="250"
+    data-skill="yamato-cannon"
+  />
+  <script>
+    const target = document.querySelector('img')
+    console.log(target.dataset);               // DOMStringMap
+    console.log(target.dataset.shipId);       // 324
+
+    // DOMStringMap (en-US) 는 dataset (en-US) 속성을 통해 읽어낼 수 있습니다.
+
+    // dataset 객체를 통해 data 속성을 가져오기 위해서는 속성 이름의 data- 뒷 부분을 사용합니다.(대시들은 camelCase로 변환되는 것에 주의하세요.)
+
+    // <article
+    //   id="electriccars"
+    //   data-columns="3"
+    //   data-index-number="12314"
+    //   data-parent="cars">
+    // ...
+    // </article>
+
+    // var article = document.getElementById('electriccars');
+
+    // article.dataset.columns // "3"
+    // article.dataset.indexNumber // "12314"
+    // article.dataset.parent // "cars"
+  </script>
+</body>
+</html>
