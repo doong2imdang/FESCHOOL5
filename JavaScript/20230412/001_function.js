@@ -245,6 +245,9 @@ function 함수(){
 }
 함수()
 
+
+
+
 // 4월 12일 코드
 // 1. object처럼 사용되는 함수의 특성
 
@@ -293,7 +296,7 @@ function 함수(a=10, b=20, c=30) {
 함수(100, 200, 300)   // 600
 함수(c=300)       // 330이 아니고 350입니다. 순서대로 들어갑니다. (a=300이 들어간다 다른값은 default)
 함수(a=100, c=300)   // 430 (a=100, b=300이 들어간다) 
-함수(a=100, b=300, c=200) // 순서가 뒤바뀌면 hello
+함수(a=100, b=300, c=200) // 순서가 뒤바뀌면 hell
 함수(a=100, c=200, b=300) // hell입니다.
 
 
@@ -328,7 +331,7 @@ function 로그인정보({
   console.log(회원등급, 글쓰기, 글읽기, 채널관리, 백업, 소셜로그인여부)
 }
 
-로그인정보({
+로그인정보({           // 전달해주는 형식은 [] object형식이여야 한다.
   회원등급: 'Silver',
   소셜로그인여부 : false,   // 중간에 생략된 값도 있고 순서까지 바뀌엇습니다. 
   백업 : '3일 이내 가능'   // 로로기법이 아니면 순서가 뒤바껴서 백업이 아닌 글쓰기에 들어가야 한다.
@@ -350,7 +353,7 @@ let {one, two, three} = {two: 20, one: 10, three: 30}  // 순서 뒤바껴도 �
 // 왼쪽에서 one과 two, three는 변수(object안에 키와 값이 아닌)
 
 let {one: 10, two, three} = {two: 20, one: 10, three: 30}   // error
-let {one=100, two, three} = {two: 20, three: 30}  // 이건 가능 one 100 two 20 three 30
+let {one =1 00, two, three} = {two: 20, three: 30}  // 이건 가능 one 100 two 20 three 30
 
 
 
@@ -395,8 +398,8 @@ function 함수 ({    // 초기값
 // let {one = 1, two = 2} = {}
 // let {a=10, b=20, c=30} = undefined  // error 
 
-
-
+// early return
+// https://www.howdy-mj.me/javascript/early-return
 
 
 
