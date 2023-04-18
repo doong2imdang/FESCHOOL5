@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <form action="">
+    <button type="submit" class="submit">제출</button>
+  </form>
+  
+  <script>
+    const submit = document.querySelector('.submit');
+    submit.addEventListener('click', (event) => {
+        console.log('clicked');
+        event.preventDefault();
+        event.stopPropagation();
+    });
+    
+    document.body.addEventListener('click', () => {
+        console.log('event still alive!');
+    }, true);   // propagation을 막기?위해서는 버블링이벤트 -> 캡처링 이벤트로 바꿔주면 된다. 세번째 인자로 true를 주면 캡처링 이벤트로!
+  </script>
+
+  <!-- 앵커의 기본 동작을 중지
+<a href="https://www.naver.com" class="link">네이버 링크입니다만..</a>
+<script>
+    const link = document.querySelector('.link');
+    link.addEventListener('click', (event) => {
+        console.log('clicked');
+        // event.preventDefault();
+    })
+</script> -->
+
+<!-- submit 의 기본 동작을 중지 -->
+<!-- <form action="">
+    <button type="submit" class="submit">제출</button>
+</form>
+<script>
+    const submit = document.querySelector('.submit');
+    submit.addEventListener('click', (event) => {
+        console.log('clicked');
+        event.preventDefault();
+    })
+</script> -->
+
+<!--  -->
+<!-- <form action="">
+  <button type="submit" class="submit">제출</button>
+</form>
+<script>
+  document.addEventListener('contextmenu', () => {
+    console.log('오른쪽 클릭!');
+    event.preventDefault();
+    alert('오른쪽 클릭을 지원하지 않습니다!')
+  });
+</script> -->
+</body>
+</html>

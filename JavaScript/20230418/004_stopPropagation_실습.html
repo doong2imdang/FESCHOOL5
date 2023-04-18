@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <!-- 1. p태그를 클릭하면 p태그의 컨텐츠를 출력하는 alert창을 띄워주고
+        2. 삭제버튼을 클릭하면 삭제할 것인지를 물어보는 confirm창을 띄어주고, 확인을 누르면 p태그를 삭제합니다  -->
+  <h1>나의 todo list</h1>
+  <p>1. 오늘 저녁에는 부대찌게를 끓여 먹겠다.<button type="button">삭제</button></p>
+  <p>2. 후식으로 슈팅스타를 먹겠다.<button type="button">삭제</button></p>
+  <p>3. 자기 전에 반드시 내일 아침 메뉴를 생각해두겠다.<button type="button">삭제</button></p>
+
+  <script>
+    // const pTags = document.querySelectorAll('p'),
+    //       btns = document.querySelectorAll('button');
+
+    // pTags.forEach(el=> {
+    //   el.addEventListener('click', () => {
+    //     alert(el.textContent.slice(0, -2));
+    //   })
+    // })
+
+    // btns.forEach(el => {
+    //   el.addEventListener('click', () => {
+    //     const result = confirm('삭제하시겠습니까?');
+
+    //     if (result) {
+    //       event.target.closest('p').remove();
+    //       event.stopPropagation();
+    //     }
+    //   })
+    // })
+
+    const btn = document.querySelectorAll('button');
+        const p = document.querySelectorAll('p')
+
+        p.forEach(el => {
+            el.addEventListener('click',()=>{
+                alert(el.textContent.slice(0,-2))
+            })
+        })
+        btn.forEach(el => {
+            el.addEventListener('click',(e)=>{
+
+                if(confirm('삭제할검니가?')){
+                    el.parentElement.remove()
+                    e.stopPropagation()
+                }
+            })
+        })
+  </script>
+</body>
+</html>
