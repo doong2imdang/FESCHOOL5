@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" item="IE=edge">
+    <meta name="viewport" item="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <script>
+    // 간단한 투두 리스트기능 구현해보기
+    // 1. 해야할 일 Todo 클래스 (내용, 상태 두 가지 프로퍼티를 가집니다.)
+
+    // 2. Todo 클래스는 상태를 변경하는 changeState 메서드를 가집니다.
+
+    // 3. 할일의 목록을 관리하는 관리자를 추상화한 TodoManager 클래스 (할일 목록을 프로퍼티로 가집니다.)
+
+    // 4. 할 일을 저장하고(addItem), 할 일의 목록을 보여주며(getItems), 할 일의 남은 갯수를 반환하는(getLeftTodoCount) 세 가지 메소드를 가집니다.
+
+
+    // 할 일(Todo) 클래스 정의
+    class Todo {
+      constructor(item, finished = false) { // 생성자 함수, 내용과 완료 상태(default: false)를 인자로 받음
+        this.item = item;   // 할 일의 내용
+        this.finished = finished;  // 할 일의 완료 여부
+      }
+
+      changeState() {  // 할 일의 완료 상태를 변경하는 메소드
+        this.finished = !this.finished;  // 현재의 완료 상태를 반대로 변경
+      }
+    }
+
+    // 할 일 목록(TodoList)을 관리하는 매니저(TodoManager) 클래스 정의
+    class TodoManager {
+      constructor() {
+        this.todoList = [];  // 할 일 목록 배열
+      }
+
+      addItem(item) {  // 할 일을 추가하는 메소드
+        const newTodo = new Todo(item);  // 새로운 할 일 인스턴스 생성
+        this.todoList.push(newTodo);  // 할 일 목록에 추가
+      }
+
+      getItems() {  // 할 일 목록을 반환하는 메소드
+        return this.todoList;  // 할 일 목록 반환
+      }
+
+      getLeftTodoCount() {  // 완료되지 않은 할 일의 개수를 반환하는 메소드
+        return this.todoList.filter((todo) => !todo.finished).length;  // 완료되지 않은 할 일의 개수를 구하고 반환
+      }
+    }
+
+    // 예시를 위한 사용법
+    const todoManager = new TodoManager();  // 할 일 목록 매니저 인스턴스 생성
+
+    // 할 일 목록에 세 가지 할 일 추가
+    todoManager.addItem("복습하기");
+    todoManager.addItem("운동하기");
+    todoManager.addItem("발표준비하기");
+
+    console.log(todoManager.getItems());  // 할 일 목록 출력 // [Todo { item: '복습하기', finished: false }, Todo { item: '운동하기', finished: false }, Todo { item: '발표준비하기', finished: false }]
+
+    todoManager.todoList[0].changeState();  // 첫 번째 할 일의 완료 상태 변경
+
+    console.log(todoManager.getLeftTodoCount()); // 완료되지 않은 할 일 개수 출력: 2
+
+
+
+
+    // 1. 할것 객체
+    class Todo {
+      constructor(item, finished) {
+        this.item = item;
+        this.finished = finished;
+      }
+
+      changeState() {
+        this.finished = !this.finished;
+      } 
+    }
+
+    const todo = new Todo('점심먹기', 'false');
+    todo // Todo {item: '점심먹기', finished: false}
+    todo.changeState(); 
+    todo  // Todo {item: '점심먹기', finished: true}
+
+    class TodoManager {
+      constructor() {
+        this.todoList = [];
+      }
+
+      addItem(item, finished = false) {
+        const todo = new Todo(item, finished);
+        this.todoList.push(todo);
+      }
+
+      getItems() {
+        return this.todoList;
+      }
+
+      getLeftTodoCount() {
+        return this.todoList.reduce((total, current) => {
+          if(current.finished === false) {
+            return ++total;
+          } else {
+            return total;
+          }
+        }, 0) // 초기값 설정
+      }
+    }
+
+    // 위에와 같은 결과
+    getLeftTodoCount() {
+        return this.todoList.reduce((total, current) =>  current.finished === false? ++total : total, 0);
+
+        return this.todoList.filter((item) => item.finished === false).length;
+    }
+
+
+    const manager = new TodoManager();
+    manager; TodoManger; //  {todoList: Array(0)}
+    manager.addItem('청소하기');  // finished = false를 설정해줘서 굳이 안써도 된다. 만약에 설정을 안했다면 undefined가 출력될 것이다.
+    manager.getItems(); // [Todo] 
+    manager.addItem('빨래하기');
+    manager.getItems()[0].changeState();
+    manager.getItems(); 
+    manager.getLeftTodoCount();  // 3
+
+
+  </script>
+</body>
+</html>

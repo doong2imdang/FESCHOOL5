@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <script>
+    function PersonGenerator() {
+      let age = 25;  
+
+      // 비공개로 만들기
+      function InnerPersonType() { };
+
+      InnerPersonType.prototype.getAge = function() {
+        return age
+      }
+
+      return InnerPersonType;
+    }
+
+    const Person = PersonGenerator();
+    const myPerson = new Person();
+
+
+    // 즉시실행함수(IIFE)
+    const PersonGenerator2 = (function () {
+      let age = 25;  
+
+      function InnerPersonType() { };
+
+      InnerPersonType.prototype.getAge = function() {
+        return age
+      }
+
+      return InnerPersonType;
+    })();
+
+    const myPerson2 = new PersonGenerator2();
+  </script>
+</body>
+</html>
