@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <script>
+    const aespa = ["카리나", "윈터", "지젤", "닝닝"];
+    // 결과 : ['카리나💖', '윈터💖', '지젤💖', '닝닝💖']
+
+    // forEach로 만들면 원본데이터가 훼손된다.
+    // aespa.forEach((item, index) => {
+    //   aespa[index] = item + '💖';
+    // })
+    // console.log(aespa);
+
+
+    // map을 이용하면 원본데이터를 훼손하지 않고 사용할 수 있다.
+    const result = aespa.map(member => member + "💖");
+    console.log(result);
+    
+    const aespa2 = aespa.map((item) => {
+      return item + '💖';
+    });
+    console.log(aespa2);
+  </script>
+</body>
+</html>

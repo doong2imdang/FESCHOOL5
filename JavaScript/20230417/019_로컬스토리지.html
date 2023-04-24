@@ -51,10 +51,15 @@
                 const title = document.getElementById("title").value;
                 const content = document.getElementById("content").value;
 
+
                 allMemo.push({ title, content, len: allMemo.length });
 
                 localStorage.setItem("allMemo", JSON.stringify(allMemo));
                 render();
+            }
+
+            function editNote () {
+                
             }
 
             function render() {

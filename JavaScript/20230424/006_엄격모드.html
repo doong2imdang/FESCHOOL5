@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <script>
+    'use strict';
+
+    // undefined = 10;
+    // null = 10;
+    // Infinity = 10;  // 읽기전용객체에 값을 할당할 수 없다. 
+
+    // str = "hello strict!"; // 키워드 없이 선언한 변수는 전역변수가 된다.
+
+    // Math.PI = 0;
+
+    const obj = {
+      firstName : 'jaehyun',
+      lastName: 'han'
+    }
+
+    delete obj.firstName;  // true
+    obj // {lastName: 'han'}
+
+    function myFunc(a, a, b) {
+      console.log(a + a + b);
+    }
+
+    myFunc(1, 2, 3);   // 말도 안되게 7이 나온다.
+    
+  </script>
+</body>
+</html>

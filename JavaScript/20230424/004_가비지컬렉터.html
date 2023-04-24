@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+  <script>
+    // case.1
+    let me = { age: 30 }  // 참조카운트 : 1;
+    let you = me;         // 참조카운트 : 2;
+
+    me = null;            // null or undefined 둘중에 하나만 써주면 참조카운트가 1로;
+    // me = undefined;
+    you = null;           // 참조카운트 : 0; 가비지컬렉션 대상이 됩니다. 
+
+
+
+    
+    // case.2
+    let x = {
+        y : {
+          z : 1
+        }
+    }
+    
+    // x가 참조하는 객체를 object1, y참조하고 있는 객체를 object2
+
+    let a = x;  // object1 참조카운트 : 2 (x, a);
+    x = 1;      // object1 참조카운트 : 1 (a); 
+
+    let b = a.y;  // object2 참조카운트 : 2(a.y, b);
+    a = 2;  // object1 참조카운트 : 0, object2 참조카운트 : 1 (b);
+
+    // b가 object2를 참조하기때문에 object1 객체는 제거되지 않습니다. 
+    // object1 객체는 사용하진 않지만 불필요하게 남아있는 거죠
+    // 이러한 상황을 메모리 누수라고 합니다. 
+
+
+
+    // case.3 클로저 메모리 누수 이슈가 발생한다. 
+    // https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_Management#mark-and-sweep_algorithm
+    function outer() {
+      let privateVal = ['test'];
+
+      function getPrivate() {
+        return privateVal    // private한 변수공간을 만들기위해 사용하는 테크닉인데, 함수안에 또다른 함수를 만들어서 꺼내는 테크닉을 사용하는데, 겉에 감싸고 있는 함수가 return키워드를 사용해 사라져도 또 다시 참조하고 있는 부분이 있기 때문에 클로저는 메모리누수의 문제가 생깁니다. 
+      }
+      return getPrivate;
+    }
+
+    const getPrivate = outer();
+    const secretVal = getPrivate();
+
+    console.log(secretVal);
+  </script>
+</body>
+</html>
