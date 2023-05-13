@@ -1,0 +1,11 @@
+footer img {
+  max-width: 125px;
+  margin: 0 auto;
+  padding: 130px 0 20px 0; 
+}
+
+footer p {
+  font-family: Noto Sans KR;
+  font-size: 12px;
+  line-height: 17px;
+}

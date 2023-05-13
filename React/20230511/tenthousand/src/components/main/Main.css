@@ -1,0 +1,50 @@
+.main-cont .txt-tobe,
+.main-cont .txt-training {
+  font-size: 24px;
+  padding-top: 27px;
+}
+
+.inp-tobe,
+.inp-training {
+  padding: 15px 20px;
+  outline: none;
+  border-radius: 7px;
+  line-height: 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.btn-trainingHour {
+  margin-top: 115px;
+  position: relative;
+}
+
+.btn-trainingHour::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../images/hand.png");
+  right: -70px;
+  bottom: -10px;
+  width: 63px;
+  height: 61px;
+}
+
+section .txt-expert {
+  padding: 115px 0;
+  font-size: 24px;
+  line-height: 70px;
+}
+
+.txt-expert strong {
+  font-size: 72px;
+  font-family: GmarketSansBold;
+  vertical-align: top;
+}
+
+section .btn-go {
+  margin-right: 18px;
+}
+
+section .btn-share {
+  background-color: #fff;
+}
